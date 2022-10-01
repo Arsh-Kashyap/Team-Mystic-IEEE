@@ -117,13 +117,17 @@ const Home = () => {
                   <Button variant="primary" onClick={() => setEndDetails(1)}>
                     stop
                   </Button>
-                  <Meeting />
                 </>
               ) : (
                 <Button variant="primary" onClick={() => setStartDetails(1)}>
                   start
                 </Button>
               )}
+              <Meeting
+                isStart={isStart}
+                id={id}
+                userDetails={userDetails.current}
+              />
             </Card.Body>
           </Card>
           <br />
