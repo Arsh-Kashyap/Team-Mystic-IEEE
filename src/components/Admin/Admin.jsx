@@ -50,7 +50,7 @@ const Admin = () => {
                         <td>{users[id].name}</td>
                         </tr>
                         <tr>
-                        <td>email</td>
+                        <td>Email</td>
                         <td>{users[id].email}</td>
                         </tr>
                         <tr>
@@ -63,16 +63,12 @@ const Admin = () => {
                         </tr>
                         
                 
-                        {Object.keys(users[id].stats).map((key, index) => {
-                            // if (inputs[key]!=null && typeof(inputs[key]) === "object" && inputs[key].length > 0 && typeof(inputs[key][0]) === "object") {
-                            //     console.log(inputs[key])
-                            //     setInputs(values => ({ ...values, [key]: converter(inputs[key]) }))
-                            // }
-                            
-                            <tr>
+                        {users[id].stats && Object.keys(users[id].stats).map((key, index) => {
+
+                            return (<tr>
                             <td>{key}</td>
                             <td>{users[id].stats[key]}</td>
-                            </tr>
+                            </tr>)
 
                         })}
                         

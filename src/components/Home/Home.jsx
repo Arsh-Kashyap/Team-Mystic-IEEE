@@ -126,7 +126,6 @@ const Home = () => {
           score={score}
         />
         <br />
-        <p>Hi there, I am using Whatsapp</p>
       </div>
     </>
   );
