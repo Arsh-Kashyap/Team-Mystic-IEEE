@@ -13,7 +13,7 @@ function Test(props) {
   );
 }
 
-function Meeting({ isStart, id, userDetails }) {
+function Meeting({ isStart, id, userDetails, score }) {
   const meetingStopped = useRef();
   const testIdentifier = "unique-proctoring-identifier";
   const fullScreenMessage =
@@ -39,9 +39,16 @@ function Meeting({ isStart, id, userDetails }) {
     meetingStopped.current = true;
     console.log("is start  is false");
     const stats = getStats();
+    score.current =
+      score.current -
+      stats.TAB_SWITCH_AWAY * 5 -
+      stats.LOOKED_AWAY -
+      stats.CHANGE_IN_NUMBER_OF_PEOPLE_IN_CAMERA * 5;
+    console.log("Score: ", score.current);
     API.put("meeting/" + id + ".json?updateMask.fieldPaths=endTime", {
       ...userDetails,
       stats: stats,
+      score: score.current,
     })
       .then(() => {
         console.log("succesfully updated!");
@@ -58,12 +65,14 @@ function Meeting({ isStart, id, userDetails }) {
   return (
     <div>
       {isStart && (
-        <div className="App">
-          <ProctorApp
-            TestComponent={Test}
-            testIdentifier={testIdentifier}
-            fullScreenMessage={fullScreenMessage}
-          />
+        <div>
+          <div className="App">
+            <ProctorApp
+              TestComponent={Test}
+              testIdentifier={testIdentifier}
+              fullScreenMessage={fullScreenMessage}
+            />
+          </div>
           <Button onClick={getStats}>Get Statistics</Button>
         </div>
       )}

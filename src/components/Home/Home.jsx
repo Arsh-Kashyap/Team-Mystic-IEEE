@@ -13,6 +13,7 @@ const Home = () => {
   const [id, setId] = useState();
 
   const [isStart, setIsStart] = useState(false);
+  const score = useRef(100);
 
   useEffect(() => {
     API.get("meeting.json")
@@ -31,13 +32,13 @@ const Home = () => {
       setUser(user);
     });
 
-    document.addEventListener("fullscreenchange", (event) => {
-      if (document.fullscreenElement) {
-        // We’re going fullscreen
-      } else {
-        setIsStart(false);
-      }
-    });
+    // document.addEventListener("fullscreenchange", (event) => {
+    //   if (document.fullscreenElement) {
+    //     // We’re going fullscreen
+    //   } else {
+    //     setIsStart(false);
+    //   }
+    // });
   }, []);
 
   //   useEffect(() => {
@@ -99,34 +100,34 @@ const Home = () => {
 
   return (
     <>
-      {
-        <div className="pf-container">
-          <br />
-          <Card style={{ width: "18rem" }}>
-            <Card.Body>
-              <Card.Title>Meeting 1</Card.Title>
-              <Card.Text>Big Data Analytics</Card.Text>
-              {isStart ? (
-                <>
-                  <Button variant="primary" onClick={() => setEndDetails(1)}>
-                    stop
-                  </Button>
-                </>
-              ) : (
-                <Button variant="primary" onClick={() => setStartDetails(1)}>
-                  start
+      <div className="pf-container">
+        <br />
+        <Card style={{ width: "18rem" }}>
+          <Card.Body>
+            <Card.Title>Meeting 1</Card.Title>
+            <Card.Text>Big Data Analytics</Card.Text>
+            {isStart ? (
+              <>
+                <Button variant="primary" onClick={() => setEndDetails(1)}>
+                  stop
                 </Button>
-              )}
-              <Meeting
-                isStart={isStart}
-                id={id}
-                userDetails={userDetails.current}
-              />
-            </Card.Body>
-          </Card>
-          <br />
-        </div>
-      }
+              </>
+            ) : (
+              <Button variant="primary" onClick={() => setStartDetails(1)}>
+                start
+              </Button>
+            )}
+          </Card.Body>
+        </Card>
+        <Meeting
+          isStart={isStart}
+          id={id}
+          userDetails={userDetails.current}
+          score={score}
+        />
+        <br />
+        <p>Hi there, I am using Whatsapp</p>
+      </div>
     </>
   );
 };
