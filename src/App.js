@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Profile from "./components/Profile/Profile";
 import Home from "./components/Home/Home";
 import Meeting from "./components/Meeting/Meeting";
-import Admin from "./components/Admin";
+import Admin from "./components/Admin/Admin";
 
 function App() {
   return (

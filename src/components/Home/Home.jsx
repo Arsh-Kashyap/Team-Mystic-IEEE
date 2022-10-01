@@ -3,14 +3,8 @@ import { Button } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import { auth } from "../../Firebase/Firebase";
 import { API } from "../services/http.service";
-// import "./Profile.css";
-import { doc, setDoc, updateDoc } from "firebase/firestore";
-import { db } from "../../Firebase/Firebase";
 import { useRef } from "react";
-import { getDatabase, ref, set } from "firebase/database";
 import Meeting from "../Meeting/Meeting";
-// import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js';
-// import { getDatabase } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js';
 
 const Home = () => {
   const userDetails = useRef();
