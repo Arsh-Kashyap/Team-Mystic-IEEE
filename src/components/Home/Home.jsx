@@ -76,7 +76,6 @@ const Home = () => {
 
   const setStartDetails = (m) => {
     setIsStart(true);
-
     userDetails.current = {
       name: user.displayName,
       email: user.email,

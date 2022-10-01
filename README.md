@@ -1,70 +1,14 @@
-# Getting Started with Create React App
+#Challenge 2
+##Context:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Company provides academic support to students of Grade 11 & 12. It nurtures 21st century transferable skills in the students through its CORE model based on Critical thinking, Collaboration, Ownership, Resilience, and Empathy. It builds awareness and confidence in the students through career counselling, support from mentors, and internship opportunities. Ultimately, Company work towards grooming all their students as leader by providing them various leadership opportunities like student mentorship, student-led clubs, and student advisory council.
+The Company supported more than 700 students holistically in Grade 11 and 12 in the Pilot Year (2020-21). 80% of the students have either led a club or participated actively in these clubs, 10% have worked on real-time projects through internship programs. High school students from government/low-income private schools who migrated to their villages during the pandemic attended the company online classes. Skilled workforce from different parts of the country joined the Online Holistic Education support program for high school students.
+Their goal for the next 5 years is to impact at least 25,000 students with holistic and student-centric education, to build an online community of at least 1000 leaders who will work towards eliminating education inequality. They strive to provide comprehensive, holistic and quality high-school educational support available at one platform for a very affordable price of Rs 500 per month.
 
-## Available Scripts
+##Challenge:
+The challenge is to measure and enhance teacher student engagement. An online platform which can help in providing real-time feedback to the teachers by the students without switching from the online session. The feedback should be able to detect whenever a student is distracted like switching between the tabs or using any other social media platforms while the session is in progress. The platform should be determining the results of the engagement based on the provided feedback.
+Additional Considerations:
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The online platform should be able to sustain in low internet bandwidth.
+- Create a reward system where the student gets reward points when they provide the feedback.
+- Multilingual Platform.
