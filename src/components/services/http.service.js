@@ -14,6 +14,8 @@ export const API = {
       Accept: accept,
       "Content-Type": "application/json",
       Authorization: `Bearer ${accessToken}`,
+      "Access-Control-Allow-Credentials": true,
+      "Access-Control-Allow-Origin": "*",
     };
   },
 
@@ -28,7 +30,8 @@ export const API = {
       url: api_url,
       ...init,
       timeout: 30000,
-      withCredentials: process.env.NODE_ENV === "production",
+      headers: headers,
+      withCredentials: false,
     });
   },
 
